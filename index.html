@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script src="papaparse.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        
+        function download_csv() {
+    
+        console.log(csv);
+        var hiddenElement = document.createElement('a');
+        hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+        hiddenElement.target = '_blank';
+        hiddenElement.download = 'export.csv';
+        hiddenElement.click();
+    }
+    </script>
+</head>
+<body>
+    <div class="control" style="margin: auto; text-align: center;">
+        <button onclick="download_csv()" style="height: 100px;">PUSH THIS BUTTON TO DOWNLOAD CSV</button>
+    </div>
+</body>
+</html>
